@@ -66,7 +66,7 @@
           для вашего бизнеса
         </h1>
         <div class="section-hero-button">
-          <button type="button" class="button-hero">Заказать услугу</button>
+          <button data-modal-open type="button" class="button-hero">Заказать услугу</button>
         </div>
       </div>
     </section>
@@ -122,6 +122,7 @@
         </li>
       </ul>
     </section>
+
     <section class="section-desktop container padding__container">
       <h2 class="h2-studio">Чем мы занимаемся</h2>
       <ul class="desktop-list">
@@ -398,14 +399,71 @@
         </div>
         <div class="subscribe">
           <p class="footer-connect">подпишитесь на рассылку</p>
-          <a href="" class="button-subscribe">
-            <span class="button-list">Подписаться</span>
-          </a>
+          <input class="subscribe-form" type="text" name="message" placeholder="E-mail" form="subscribe" />
+          <button type="submit" class="button-subscribe" id="subscribe">Подписаться </button>
         </div>
       </div>
     </div>
     <p class="footer-copyright">2020 | Developed by GoIT Students</p>
   </footer>
+
+  <div data-modal class="backdrop is-hidden">
+    <div class="modal">
+      <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+
+      <form action="" class="form-topic">
+
+        <div class="space-form">
+          <input type="text" class="form-input" name="name" id="name" placeholder=" ">
+          <label for="name" class="form-label">Имя</label>
+          <svg class="form-icon" width="12" height="12">
+            <use href="./images/svg/symbol.svg#icon-name"></use>
+          </svg>
+        </div>
+
+        <div class="space-form">
+          <input type="tel" class="form-input" placeholder=" ">
+          <label for="" class="form-label">Телефон</label>
+          <svg class="form-icon" width="13" height="13">
+            <use href="./images/svg/symbol.svg#icon-tel"></use>
+          </svg>
+        </div>
+
+        <div class="space-form">
+          <input type="email" class="form-input" placeholder=" ">
+          <label for="" class="form-label">Почта</label>
+          <svg class="form-icon" width="15" height="12">
+            <use href="./images/svg/symbol.svg#icon-post"></use>
+          </svg>
+        </div>
+
+        <div class="comments-form">
+          <textarea class="form-texterea" name="comments" id="comments" cols="" rows="" placeholder=" "></textarea>
+          <label class="comments-item" for="comments">Комментарии</label>
+        </div>
+
+        <div class="form-contract">
+          <label class="checkbox-label">
+            <input class="checkbox" type="checkbox">
+            <span class="checkbox-icon"></span>
+            Соглашаюсь с рассылкой и принимаю
+            <a href="">Условия договора</a>
+          </label>
+        </div>
+
+        <button class="form-button" type="submit">Отправить</button>
+
+      </form>
+
+      <button data-modal-close type="button" class="button-close">
+        <svg class="icon-close" width="18" height="18">
+          <use href="./images/svg/symbol.svg#icon-close"></use>
+        </svg>
+      </button>
+
+    </div>
+  </div>
+  <script src="./js/modal.js"></script>
 </body>
 
 </html>

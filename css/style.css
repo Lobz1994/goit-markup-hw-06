@@ -139,8 +139,6 @@ header {
 .nav-contact:hover,
 .nav-contact:focus {
   color: #2196F3;
-  --color2: #2196F3;
-  fill: var(--blue-color);
 }
 
 .icon-header {
@@ -221,6 +219,7 @@ header {
   line-height: 30px;
   letter-spacing: 0.06em;
   color: var(--white-color);
+  cursor: pointer;
 }
 .container-button {
   display: flex;
@@ -472,6 +471,237 @@ header {
 }
 
 
+.form-topic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.form-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+.form-icon {
+  position: absolute;
+  top: 14px;
+  left: 18px;
+  transform: translatey(0%);
+}
+.space-form {
+  position: relative;
+  margin-bottom: 28px;
+  cursor: pointer;
+}
+.form-label {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 42px;
+  transform: translatey(-50%);
+  transition: transform 250ms linear;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  opacity: 1;
+  color: var(--grey-color);
+}
+.form-input {
+  width: 448px;
+  height: 40px;
+  margin: 0;
+  padding-left: 42px;
+
+  
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  color: var(--blue-color);
+  transform: translate(-25px, -40px);
+}
+
+.form-input:focus ~ .form-icon {
+  fill: var(--blue-color);
+}
+.form-input:focus {
+border: var(--blue-color);
+outline-color: var(--blue-color);
+}
+
+.comments-form {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+.form-texterea {
+  resize: none;
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+.comments-item {
+  top: 14px;
+  left: 18px;
+  transform: translatey(0%);
+  position: absolute;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  opacity: 1;
+  color: var(--grey-color);
+  transition: transform 250ms linear;
+}
+.form-texterea:focus {
+  border: var(--blue-color);
+  outline-color: var(--blue-color);
+}
+.form-texterea:focus + .comments-item,
+.form-texterea:not(:placeholder-shown) + .comments-item {
+  color: var(--blue-color);
+  transform: translateY(-35px);
+}
+
+.checkbox-label {
+  display: inline-block;
+  cursor: pointer;
+}
+.checkbox {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  appearance: none;
+}
+.checkbox-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 16px;
+  height: 15px;
+  border: 1.5px solid var(--black-color);
+  border-radius: 4px;
+}
+.checkbox:checked + .checkbox-icon {
+  background-color: var(--blue-color);
+  background-image: url(../images/svg/icon-check.svg);s
+  background-size: cover;
+  border: var(--blue-color);
+}
+
+.button-close {
+  display: block;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: var(--white-color);
+  cursor: pointer;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+}
+.icon-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+.modal {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms var(--timing-function);
+    width: 528px;
+    height: 581px;
+    padding: 40px;
+    background-color: var(--white-color);
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+}
+
+.comments-field {
+  width: 448px;
+  height: 120px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.form-contract {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: var(--grey-color);
+}
+.form-contract a {
+  display: inline;
+  text-decoration: underline;
+  color: var(--blue-color);
+}
+
+.form-button {
+  width: 200px;
+  height: 50px;
+  margin-bottom: 40px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+
+  background: var(--blue-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 1px;
+  cursor: pointer;
+}
+
 /* PORTFOLIO MAIN */
 .section-portfolio {
   padding-top: 94px;
@@ -501,6 +731,8 @@ header {
   line-height: 1.6;
   letter-spacing: 0.03em;
   color: var(--black-color);
+  cursor: pointer;
+  transition: background-color 250ms var(--timing-function), color 250ms var(--timing-function);
 }
 .button:hover,
 .button:focus {
@@ -551,7 +783,7 @@ header {
     color: #FFFFFF;
     opacity: 0;
     margin: 63px 24px;
-    transform: translateY(100%);
+    transform: translateY(180%);
     transition: transform 250ms var(--timing-function);
 }
 
@@ -742,13 +974,54 @@ footer {
   margin-right: 0;
 }
 
+
+.subscribe-form {
+  width: 358px;
+  height: 50px;
+  background: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 18px 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+}
+.subscribe-form::placeholder {
+  padding: 18px 12px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.03em;
+
+  color: rgba(255, 255, 255, 0.6);
+}
 .button-subscribe {
+  width: 200px;
+  height: 50px;
   display: inline-flex;
   align-items: center;
   padding: 10px 29px;
   background: #2196f3;
+  border: 1px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #FFFFFF;
+  letter-spacing: 0.06em;
+  cursor: pointer;
 }
 .button-subscribe::after {
   width: 24px;
@@ -756,6 +1029,8 @@ footer {
   margin-left: 10px;
   background-image: url(../images/svg/subscribe.svg);
   content: '';
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 .button-list {
   font-family: Roboto;
