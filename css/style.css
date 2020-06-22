@@ -685,7 +685,6 @@ outline-color: var(--blue-color);
 .form-button {
   width: 200px;
   height: 50px;
-  margin-bottom: 40px;
 
   font-family: Roboto;
   font-style: normal;
@@ -983,7 +982,9 @@ footer {
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  padding: 18px 12px;
+  
+  padding: 15px 16px;
+  margin-right: 9px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -994,7 +995,6 @@ footer {
 
 }
 .subscribe-form::placeholder {
-  padding: 18px 12px;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;

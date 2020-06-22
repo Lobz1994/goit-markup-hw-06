@@ -398,9 +398,15 @@
           </ul>
         </div>
         <div class="subscribe">
-          <p class="footer-connect">подпишитесь на рассылку</p>
-          <input class="subscribe-form" type="text" name="message" placeholder="E-mail" form="subscribe" />
-          <button type="submit" class="button-subscribe" id="subscribe">Подписаться </button>
+
+          <form action="" class="section-subscribe">
+            <p class="footer-connect">подпишитесь на рассылку</p>
+            <input class="subscribe-form" type="text" name="message" id="subscribe" placeholder="E-mail"
+              form="subscribe" />
+            <label for="subscribe"></label>
+            <button type="submit" class="button-subscribe" id="subscribe">Подписаться </button>
+          </form>
+
         </div>
       </div>
     </div>
@@ -422,16 +428,16 @@
         </div>
 
         <div class="space-form">
-          <input type="tel" class="form-input" placeholder=" ">
-          <label for="" class="form-label">Телефон</label>
+          <input type="tel" class="form-input" id="tel" placeholder=" ">
+          <label for="tel" class="form-label">Телефон</label>
           <svg class="form-icon" width="13" height="13">
             <use href="./images/svg/symbol.svg#icon-tel"></use>
           </svg>
         </div>
 
         <div class="space-form">
-          <input type="email" class="form-input" placeholder=" ">
-          <label for="" class="form-label">Почта</label>
+          <input type="email" class="form-input" id="email" placeholder=" ">
+          <label for="email" class="form-label">Почта</label>
           <svg class="form-icon" width="15" height="12">
             <use href="./images/svg/symbol.svg#icon-post"></use>
           </svg>
