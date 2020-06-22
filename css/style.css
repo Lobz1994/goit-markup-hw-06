@@ -606,7 +606,7 @@ outline-color: var(--blue-color);
 }
 .checkbox:checked + .checkbox-icon {
   background-color: var(--blue-color);
-  background-image: url(../images/svg/icon-check.svg);s
+  background-image: url(../images/svg/icon-check.svg);
   background-size: cover;
   border: var(--blue-color);
 }
